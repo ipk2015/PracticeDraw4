@@ -12,6 +12,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
@@ -77,6 +78,7 @@ public class Practice13CameraRotateHittingFaceView extends View {
         int centerY = point.y + bitmapHeight / 2;
 
         camera.save();
+        camera.setLocation(0,0,-50);
         matrix.reset();
         camera.rotateX(degree);
         camera.getMatrix(matrix);
